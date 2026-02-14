@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <hr>
+    <div class="nav">
+        <div class="navbar">
+            <img class="h-[45px] w-[45px] ml-[22px] mt-[2px] mb-[8px]" src="image/revou.png" alt="">
+            <ul class="flex list-none items-center ml-[1060px] gap-[20px]">
+                <li class="Home">Home</li>
+                <li class="Our">Our Profile</li>
+                <li class="Port">Portofolio</li>
+                <li class="Message">Message Us</li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <!-- BODY 2 -->
+    <hr>
+    <div class="body2">
+        <div class="ml-[75px] mt-[40px] ">
+            <h1 id="sambutan"></h1>
+            <script>
+                let namaPengguna = prompt("Silakan masukkan nama Anda:");
+                    if (namaPengguna) {
+                document.getElementById("sambutan").textContent = "Hi " + namaPengguna + " Welcome To Website";
+                    } else {
+                document.getElementById("sambutan").textContent = "Hi, selamat datang!";
+                }
+            </script>
+            <h2>Ini adalah website latihan pertama</h2>
+            <img class="h-[667px] w-[1366px] mt-[20px] mb-[70px]" src="image/goku.jpg" alt="">
+        </div>
+    </div>
+    <hr>
+    <!-- BODY 3 -->
+    <hr>
+    <div>
+        <div>
+            <p class="text-[20px] ml-[150px] mt-[23px] font-bold">Our School</p>
+            <div class="flex mb-[100px]">
+                <img class="h-[200px] ml-[150px] mt-[50px] rounded-[40px]" src="image/letris.png" alt="">
+                <h1 class="mt-[70px] ml-[30px]">Sekolah Menengah Kejuruan Letris 2 <br>Jurusan SMK Letris 2: <br>RPL <br>AKL <br>DKV <br>MPLB <br>TKJ</h1>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- BODY 4 -->
+    <hr>
+    <div>
+    <div>
+        <h1 class="font-bold text-[25px] mt-[30px] ml-[150px] mb-[15px]">Message Us</h1>
+        <!-- Nama -->
+        <div class="flex ml-[150px]">
+        <label for="inputNama">Nama</label>
+        <p class="ml-[120px]">:</p>
+        <input id="inputNama" class="inputnama ml-[10px]" type="text" placeholder="Nama" required>
+        </div>
+        <!-- Tanggal Lahir -->
+        <div class="flex ml-[150px]">
+        <label for="tanngalLahir" class="mt-[9px]">Tanggal Lahir</label>
+        <p class="ml-[69px] mt-[9px]">:</p>
+        <input type="date" id="tanngalLahir" class="border border-black ml-[11.5px] p-1 mt-[9px]" required>
+        </div>
+        <!-- Jenis Kelamin -->
+        <div class="flex ml-[150px]">
+        <label class="mt-[9px]">Jenis Kelamin</label>
+        <p class="ml-[69px] mt-[9px]">:</p>
+        <input type="radio" name="gender" value="Laki-Laki" required class="ml-[11.5px] mt-[9px]">
+        <p class="mt-[8px] ml-[2px]">Laki-Laki</p>
+        <input type="radio" name="gender" value="Perempuan" required class="ml-[11.5px] mt-[9px]">
+        <p class="mt-[8px] ml-[2px]">Perempuan</p>
+        </div>
+        <!-- Pesan -->
+        <div class="flex ml-[150px]">
+            <div class="flex flex-row">
+                <label for="pesan">Pesan</label>
+                <p class="flex ml-[123px] mt-[9px]">:</p>
+                <textarea id="pesan" rows="3" class="border border-black ml-[11.5px] p-1 mt-[9px] pr-[25px] flex" required></textarea>
+            </div>
+            <!-- Kolom Data Terkirim -->
+            <!-- Tombol Submit -->
+            <div class="border border-black w-[350px] bg-white ml-[300px] mt-[20px] pt-[40px]">
+            <h2 class="text-center font-bold mb-4 pb-[20px] pt-[20px]"></h2>
+            <p id="currentTime"></p>
+            <p id="outputNama"></p>
+            <p id="outputTanggal"></p>
+            <p id="outputGender"></p>
+            <p id="outputPesan"></p>
+            </div>
+        </div>
+        <button type="submit" class="border border-black bg-gray-200 hover:bg-gray-400 p-2 ml-[150px] mt-[9px] pl-40 pr-40">
+        Submit
+        </button>
+        <script src="js/script.js"></script>
+    </div>
+    </div>
+    <hr>
+</body>
+<footer>
+    <hr>
+    <P class="created">Created By RevoU</P>
+    <hr>
+</footer>
+</html>
